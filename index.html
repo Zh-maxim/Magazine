@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <style>
+        h1{
+            font-size:30px;
+            text-align: center;
+        }
+        .o{
+            display: flex;
+            justify-content: center;
+        }
+        #blockUp{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        #textarea{
+            width: 275px;
+            height: 125px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #btnplus{
+            width: 280px;
+            height: 50px;
+            margin-left: 10px;
+            background: black;
+        }
+        #blockDawn{
+            width: 300px;
+            height: 300px;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            border-right: 2px solid;
+            overflow: scroll;
+
+        }
+        .lol{
+            width: 275px;
+            height: 75px;
+            background: black;
+            color: white;
+            margin-top: 10px;
+            border: 2px solid black;
+        }
+    </style>
+    <section class="o">
+    <section>
+    <h1>Журнальчик</h1>
+    <div id="blockUp">
+    <textarea id="textarea"></textarea>
+    <div id="btnplus"></div>
+    </div>
+    <div id="blockDawn"></div>
+    </section>
+    </section>
+    <script>
+        let input = document.getElementById("textarea");
+        let btn = document.getElementById("btnplus");
+        let dawn = document.getElementById('blockDawn');
+        btn.onclick = function() {
+        let text = input.value;
+        dawn.innerHTML += "<div class=\"lol\">"+text+"</div>"
+        }
+    </script>
+</body>
+</html>
